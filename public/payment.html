@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment</title>
+<style>
+  /* CSS styles */
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+  }
+  header {
+    background-color: #333; /* Dark grey header background */
+    color: #fff; /* White header text color */
+    padding: 10px;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav {
+    background-color: #ccc; /* Greyish navbar background */
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    display: block;
+    color: #333; /* Black navigation link color */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    background-color: #ddd; /* Light grey navigation link hover background */
+    color: #000; /* Black navigation link hover color */
+  }
+  /* Main content styles */
+  main {
+    padding: 20px;
+  }
+  /* Form styles */
+  form {
+    margin-top: 10px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+  }
+  button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    background-color: #333;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Payment</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Property.html">Property</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <!-- Payment Form -->
+  <section id="payment">
+    <h2>Select Payment Mode</h2>
+    <form id="payment-form">
+      <label for="payment-mode">Payment Mode:</label>
+      <select id="payment-mode" name="payment-mode" required>
+        <option value="">Select Payment Mode</option>
+        <option value="cash">Cash</option>
+        <option value="banking">Banking</option>
+        <option value="online">Online Transaction</option>
+        <!-- Add more payment options as needed -->
+      </select><br>
+      <button type="submit">Submit Payment</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

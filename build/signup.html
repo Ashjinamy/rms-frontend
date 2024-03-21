@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and Registration Forms</title>
+<style>
+  /* CSS styles */
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #838282;
+  }
+  /* Header styles */
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  header h1 {
+    margin: 0;
+  }
+  /* Navigation styles */
+  nav {
+    background-color: #333;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  nav li {
+    float: left;
+  }
+  nav li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  nav li a:hover {
+    background-color: #555;
+  }
+  /* Main content styles */
+  main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  /* Card styles */
+  .card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+  }
+  .card form {
+    margin-top: 10px;
+    color: #fff;
+  }
+  .card label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+  .card input[type="text"],
+  .card input[type="password"],
+  .card select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .card button {
+    background-color: #006494;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  .card button:hover {
+    background-color: #0077b6;
+  }
+  .toggle-link {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>R.M.S</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <!-- Login Form -->
+  <div class="card" id="login-form-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="user-type">User Type:</label>
+      <select id="user-type" name="user-type">
+        <option value="tenant">Tenant</option>
+        <option value="property-manager">Property Manager</option>
+      </select><br>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" id="register-link" class="toggle-link">Register</a></p>
+  </div>
+  <!-- Registration Form -->
+  <div class="card" id="registration-form-container" style="display: none;">
+    <h2>Registration</h2>
+    <form id="registration-form">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required><br>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="phone-number">Phone Number:</label>
+      <input type="tel" id="phone-number" name="phone-number" required><br>
+
+      <label for="lease-start-date">Lease Start Date:</label>
+      <input type="date" id="lease-start-date" name="lease-start-date" required><br>
+
+      <label for="lease-end-date">Lease End Date:</label>
+      <input type="date" id="lease-end-date" name="lease-end-date" required><br>
+
+      <label for="lease-number">Lease Number:</label>
+      <input type="text" id="lease-number" name="lease-number" required><br>
+
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" id="login-link" class="toggle-link">Sign in</a></p>
+  </div>
+</main>
+
+<script>
+  const loginFormContainer = document.getElementById('login-form-container');
+  const registrationFormContainer = document.getElementById('registration-form-container');
+  const registerLink = document.getElementById('register-link');
+  const loginLink = document.getElementById('login-link');
+
+  registerLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    loginFormContainer.style.display = 'none';
+    registrationFormContainer.style.display = 'block';
+  });
+
+  loginLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    loginFormContainer.style.display = 'block';
+    registrationFormContainer.style.display = 'none';
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maintenance Request</title>
+<style>
+/* CSS styles */
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+}
+/* Header styles */
+header {
+  background-color: #333; /* black header background */
+  color: #fff; /* white text */
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  margin: 0;
+}
+/* Navigation styles */
+nav {
+    background-color: #ccc; /* Greyish navbar background */
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  nav ul li {
+    float: left;
+  }
+  nav ul li a {
+    display: block;
+    color: #333; /* Black navigation link color */
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    background-color: #ddd; /* Light grey navigation link hover background */
+    color: #000; /* Black navigation link hover color */
+  }
+/* Main content styles */
+main {
+  padding: 20px;
+}
+/* Form styles */
+form {
+  margin-top: 10px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #000; /* black border */
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff; /* white background */
+  color: #000; /* black text */
+}
+textarea {
+  height: 100px;
+}
+button {
+  background-color: #000; /* black button background */
+  color: #fff; /* white text */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  background-color: #333; /* darker black on hover */
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 10px;
+  }
+}
+</style>
+</head>
+</head>
+<body>
+<header>
+  <h1>Maintenance Request</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Property.html">Property</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="MaintenanceRequest.js">Maintenance</a></li>
+      <li><a href="Contact.js">Contact</a></li>
+      <li><a href="Payment.js">Payment</a></li>
+      <li><a href="Feedback.js">Feedback</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <!-- Maintenance Request Form -->
+  <section id="maintenance-request">
+    <h2>Request Maintenance</h2>
+    <form id="maintenance-form">
+      <label for="issue">Issue:</label>
+      <textarea id="issue" name="issue" required></textarea><br>
+      <label for="urgency">Urgency:</label>
+      <select id="urgency" name="urgency">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select><br>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+</main>
+</body>
+</html>

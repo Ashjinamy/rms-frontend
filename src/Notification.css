@@ -1,0 +1,37 @@
+.notification-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .notification-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .notification-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .notification-container th,
+  .notification-container td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .notification-container th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .notification-container tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .notification-container tbody tr:hover {
+    background-color: #ddd;
+  }
+  
